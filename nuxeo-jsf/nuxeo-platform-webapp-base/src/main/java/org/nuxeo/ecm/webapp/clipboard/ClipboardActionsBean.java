@@ -333,7 +333,7 @@ public class ClipboardActionsBean extends InputController implements ClipboardAc
         documentManager.save();
 
         if (sb.length() > 0) {
-            facesMessages.add(StatusMessage.Severity.WARN, sb.toString(), null);
+            facesMessages.add(StatusMessage.Severity.WARN, sb.toString());
         }
         return newDocs;
     }
@@ -377,7 +377,7 @@ public class ClipboardActionsBean extends InputController implements ClipboardAc
             moveDocumentList(getCurrentSelectedListName());
         } catch (ClientException e) {
             log.info("moveWorkingList failed" + e.getMessage(), e);
-            facesMessages.add(StatusMessage.Severity.WARN, messages.get("invalid_operation"), null);
+            facesMessages.add(StatusMessage.Severity.WARN, messages.get("invalid_operation"));
         }
         return null;
     }
@@ -387,7 +387,7 @@ public class ClipboardActionsBean extends InputController implements ClipboardAc
             pasteDocumentList(getCurrentSelectedList());
         } catch (ClientException e) {
             log.info("pasteWorkingList failed" + e.getMessage(), e);
-            facesMessages.add(StatusMessage.Severity.WARN, messages.get("invalid_operation"), null);
+            facesMessages.add(StatusMessage.Severity.WARN, messages.get("invalid_operation"));
         }
         return null;
     }
@@ -398,7 +398,7 @@ public class ClipboardActionsBean extends InputController implements ClipboardAc
             returnToPreviouslySelectedList();
         } catch (ClientException e) {
             log.info("pasteClipboard failed" + e.getMessage(), e);
-            facesMessages.add(StatusMessage.Severity.WARN, messages.get("invalid_operation"), null);
+            facesMessages.add(StatusMessage.Severity.WARN, messages.get("invalid_operation"));
 
         }
         return null;
@@ -469,7 +469,7 @@ public class ClipboardActionsBean extends InputController implements ClipboardAc
         }
         documentManager.save();
         if (sb.length() > 0) {
-            facesMessages.add(StatusMessage.Severity.WARN, sb.toString(), null);
+            facesMessages.add(StatusMessage.Severity.WARN, sb.toString());
         }
         return newDocuments;
     }
